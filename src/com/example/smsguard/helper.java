@@ -1,6 +1,8 @@
 package com.example.smsguard;
 
 import java.lang.reflect.Field;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 
 import android.app.ActionBar;
 import android.app.Activity;
@@ -24,9 +26,8 @@ public class helper {
 		return sp;
 	}
 
-	 
-
-	public static void setActionBar(Activity act, String Title, Boolean showHomeButton) {
+	public static void setActionBar(Activity act, String Title,
+			Boolean showHomeButton) {
 		act.getActionBar().setDisplayShowHomeEnabled(false);
 		act.getActionBar().setTitle(Title);
 		act.getActionBar().setBackgroundDrawable(
@@ -48,5 +49,11 @@ public class helper {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+	}
+
+	public static String getCurrentDate(String format) {
+		Calendar calendar = Calendar.getInstance();
+		SimpleDateFormat simpleDateFormat = new SimpleDateFormat(format);
+		return simpleDateFormat.format(calendar.getTime());
 	}
 }

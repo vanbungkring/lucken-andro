@@ -8,6 +8,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
+        android:background="@color/white"
         android:orientation="vertical" >
 
         <ListView
@@ -18,9 +19,11 @@
             android:choiceMode="singleChoice"
             android:divider="@color/white"
             android:dividerHeight="10dp"
-            android:fadingEdge="none" 
-            android:padding="10dp" >
-
+            android:fadingEdge="none"
+            android:listSelector="@android:color/white"
+            android:padding="10dp"
+            android:stackFromBottom="true"
+            android:transcriptMode="alwaysScroll" >
         </ListView>
 
         <TextView
@@ -35,24 +38,34 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="30dp" >
+        android:layout_height="wrap_content"
+        android:background="@color/grey"
+        android:padding="4dp" >
 
         <EditText
-            android:id="@+id/editText1"
+            android:id="@+id/EtChatMessage"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:ems="10" >
+            android:background="@drawable/custom_text_chat"
+            android:ems="10"
+            android:hint="@string/ChatMessageHint"
+            android:padding="4dp" >
 
             <requestFocus />
         </EditText>
 
-        <Button
-            android:id="@+id/button1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" 
-            android:text="Button" />
+        <View
+            android:id="@+id/view1"
+            android:layout_width="10dp"
+            android:layout_height="10dp" />
 
+        <Button
+            android:id="@+id/BtChatSend"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:background="@color/grey"
+            android:text="@string/ChatMessageButton" />
     </LinearLayout>
 
 </LinearLayout>

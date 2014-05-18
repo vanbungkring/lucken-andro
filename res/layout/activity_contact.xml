@@ -16,7 +16,7 @@
         android:paddingTop="4dp" >
 
         <EditText
-            android:id="@+id/editText1"
+            android:id="@+id/EtChatMessage"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/custom_text"

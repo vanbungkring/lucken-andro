@@ -17,7 +17,7 @@ public class MessageAdapter extends BaseAdapter {
 	private static LayoutInflater inflater = null;
 	private Activity activity;
 	List<Message> Messages;
-	Boolean IsChating = false;
+	Boolean IsChating = false; 
 
 	public MessageAdapter(Activity a, List<Message> messages, Boolean isChating) {
 		activity = a;
@@ -60,6 +60,8 @@ public class MessageAdapter extends BaseAdapter {
 				else
 					vi = inflater.inflate(R.layout.chat_item_green, null);
 				holder.TvMessageDate = (TextView) vi
+						.findViewById(R.id.TvChatDate);
+				holder.TvMessageTime = (TextView) vi
 						.findViewById(R.id.TvChatTime);
 				holder.TvMessageContent = (TextView) vi
 						.findViewById(R.id.TvChatContent);
@@ -84,6 +86,8 @@ public class MessageAdapter extends BaseAdapter {
 			message = Messages.get(position);
 			if (!IsChating)
 				holder.TvMessageSender.setText(message.getSender());
+			else
+				holder.TvMessageTime.setText(message.getTime());
 			holder.TvMessageDate.setText(message.getDate());
 			holder.TvMessageContent.setText(message.getContent());
 			holder.TvMessageContent.setTag(message.getId());
@@ -96,6 +100,7 @@ public class MessageAdapter extends BaseAdapter {
 	public static class ViewHolder {
 		public TextView TvMessageSender;
 		public TextView TvMessageDate;
+		public TextView TvMessageTime;
 		public TextView TvMessageContent;
 	}
 }
