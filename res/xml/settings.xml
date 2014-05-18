@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <PreferenceCategory android:title="Account Information" >
+        <EditTextPreference
+            android:defaultValue="+62817811281212"
+            android:key="prefSmsCenter"
+            android:summary="+62817811281212"
+            android:title="Sms Center" />
+        <EditTextPreference
+            android:defaultValue="+62817819203411"
+            android:key="prefRegistrationCenter"
+            android:summary="+62817819203411"
+            android:title="Registration Center" />
+        <EditTextPreference
+            android:defaultValue="04/06/2014"
+            android:enabled="false"
+            android:key="prefValidUntil"
+            android:summary="04/06/2014"
+            android:title="Valid Until" />
+
+        <ListPreference
+            android:defaultValue="1"
+            android:enabled="true"
+            android:entries="@array/service"
+            android:entryValues="@array/serviceValues"
+            android:key="prefServiceType"
+            android:selectable="true"
+            android:summary="Platinum"
+            android:title="Service Type" />
+
+        <EditTextPreference
+            android:defaultValue="0.9.2"
+            android:enabled="false"
+            android:key="prefFeedDescription"
+            android:summary="0.9.2"
+            android:title="Version" />
+
+        <ListPreference
+            android:defaultValue="30"
+            android:enabled="true"
+            android:entries="@array/autolock"
+            android:entryValues="@array/autolockValues"
+            android:key="prefAutolock"
+            android:selectable="true"
+            android:summary="After 30 minute of inactivity"
+            android:title="Autolock" />
+        <ListPreference
+            android:defaultValue="1"
+            android:enabled="true"
+            android:entries="@array/language"
+            android:entryValues="@array/languageValues"
+            android:key="prefLanguageSelection"
+            android:selectable="true"
+            android:summary="English"
+            android:title="Language Selection" />
+
+        <EditTextPreference
+            android:defaultValue="About this application"
+            android:key="prefAbout"
+            android:title="About" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

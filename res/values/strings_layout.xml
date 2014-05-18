@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="LoginTitle">Sign In</string>
+    <string name="LoginPasswordLabel">Password</string>
+    <string name="LoginPasswordHint">Type Your  password here</string>
+    <string name="LoginButton">Sign In</string>
+    <string name="LoginForgotLabel">Forgot your password?</string>
+    <string name="MainTitle">SMS Guard</string>
+    <string name="ChatTitle">Chat Title</string> 
+    <string name="SettingTitle">Settings</string>
+    <string name="ComposeTitle">Compose</string>
+    <string name="ComposeToLabel">To</string>
+    <string name="ComposeToHint">Type here</string>
+    <string name="ComposeMessageLabel">New Message</string>
+    <string name="ComposeMessageHint">Type here</string>
+    <string name="ComposeButton">Encrypt and Send</string>
+    <string name="SendTitle">Send Contact</string>
+    <string name="SendToLabel">To</string>
+    <string name="SendToHint">Type here</string>
+    <string name="SendButton">Send</string>
+    <string name="ContactTittle">Contact List</string>
+    <string name="ContactSearchHint">Search</string>
+
+</resources>
