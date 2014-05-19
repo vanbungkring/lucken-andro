@@ -103,6 +103,9 @@ public class MainActivity extends Activity {
 		case R.id.mn_contatcs:
 			i = new Intent(MainActivity.this, ContactActivity.class);
 			break;
+		case R.id.mn_actiovation:
+			i = new Intent(MainActivity.this, ActivationActivity.class);
+			break;
 		case R.id.mn_setting:
 			i = new Intent(MainActivity.this, SettingsActivity.class);
 			break;

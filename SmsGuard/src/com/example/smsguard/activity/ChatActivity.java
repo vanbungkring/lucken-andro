@@ -11,6 +11,7 @@ import com.example.smsguard.model.Message;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.AdapterView;
@@ -28,7 +29,7 @@ public class ChatActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_chat);
-		helper.setActionBar(this, getString(R.string.ChatTitle), false);
+		helper.setActionBar(this, getString(R.string.ChatTitle), true);
 		EtMessage = (EditText) findViewById(R.id.EtChatMessage);
 		list = (ListView) findViewById(R.id.List);
 		try {
@@ -89,5 +90,11 @@ public class ChatActivity extends Activity {
 		MessageAdapter adapter = new MessageAdapter(this, Messsages, true);
 		list.setAdapter(adapter);
 
+	}
+
+	@Override
+	public boolean onMenuItemSelected(int featureId, MenuItem item) {
+		finish();
+		return super.onMenuItemSelected(featureId, item);
 	}
 }

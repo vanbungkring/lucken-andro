@@ -15,6 +15,7 @@ import android.preference.EditTextPreference;
 import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.PreferenceActivity;
+import android.view.MenuItem;
 
 /**
  * @author Luqman
@@ -91,5 +92,11 @@ public class SettingsActivity extends PreferenceActivity implements
 				(findPreference(key)).setSummary(data1[loop]);
 			loop++;
 		}
+	}
+
+	@Override
+	public boolean onMenuItemSelected(int featureId, MenuItem item) {
+		finish();
+		return super.onMenuItemSelected(featureId, item);
 	}
 }

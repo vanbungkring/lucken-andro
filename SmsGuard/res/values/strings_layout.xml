@@ -23,5 +23,6 @@
     <string name="ContactSearchHint">Search</string>
     <string name="ChatMessageHint">Message</string>
     <string name="ChatMessageButton">Send</string>
+    <string name="ActivationTitle">Activation</string>
 
 </resources>
