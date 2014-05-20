@@ -1,0 +1,35 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" >
+
+    <item
+        android:id="@+id/mn_add"
+        android:icon="@drawable/ic_menu_add"
+        android:orderInCategory="0"
+        android:showAsAction="always"
+        android:title=""/>
+    <item
+        android:id="@+id/mn_messages"
+        android:icon="@drawable/mn_messages_0"
+        android:orderInCategory="0"
+        android:showAsAction="ifRoom"
+        android:title="Messages"/>
+    <item
+        android:id="@+id/mn_contatcs"
+        android:icon="@drawable/mn_contacts_0"
+        android:orderInCategory="0"
+        android:showAsAction="ifRoom"
+        android:title="Contacts"/>
+    <item
+        android:id="@+id/mn_actiovation"
+        android:icon="@drawable/mn_activation_0"
+        android:orderInCategory="0"
+        android:showAsAction="ifRoom"
+        android:title="Activation"/>
+    <item
+        android:id="@+id/mn_setting"
+        android:icon="@drawable/mn_settings_0"
+        android:orderInCategory="0"
+        android:showAsAction="ifRoom"
+        android:title="Settings"/>
+
+</menu>
