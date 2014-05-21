@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.smsguard"
     android:versionCode="1"
-    android:versionName="1.0" >
+    android:versionName="1.1" >
 
     <uses-sdk
         android:minSdkVersion="14"
@@ -43,7 +43,10 @@
         <activity
             android:name="com.example.smsguard.activity.ComposeActvity"
             android:theme="@style/AppTheme" >
-        >
+        </activity>
+        <activity
+            android:name="com.example.smsguard.activity.AboutActivity"
+            android:theme="@android:style/Theme.Light.NoTitleBar" >
         </activity>
         <activity
             android:name="com.example.smsguard.activity.ContactActivity"

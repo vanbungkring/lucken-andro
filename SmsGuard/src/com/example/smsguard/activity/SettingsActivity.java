@@ -14,6 +14,9 @@ import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.PreferenceActivity;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ListView;
+import android.widget.Toast;
 
 /**
  * @author Luqman
@@ -40,10 +43,19 @@ public class SettingsActivity extends PreferenceActivity implements
 
 	
 	@Override
+	protected void onListItemClick(ListView l, View v, int position, long id) {
+		// TODO Auto-generated method stub
+		Toast.makeText(getApplicationContext(), position + " pos", Toast.LENGTH_SHORT).show();
+		super.onListItemClick(l, v, position, id);
+	}
+
+
+	@Override
 	protected void onResume() {
 		super.onResume();
 		getPreferenceScreen().getSharedPreferences()
 				.registerOnSharedPreferenceChangeListener(this);
+		
 	}
 
 	@Override

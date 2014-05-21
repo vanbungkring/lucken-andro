@@ -54,11 +54,13 @@
             android:selectable="true"
             android:summary="English"
             android:title="Language Selection" />
-
-        <EditTextPreference
-            android:defaultValue="About this application"
-            android:key="prefAbout"
-            android:title="About" />
     </PreferenceCategory>
+
+    <PreferenceScreen android:title="About this application" >
+        <intent
+            android:action="android.intent.action.MAIN"
+            android:targetClass="com.example.smsguard.activity.AboutActivity"
+            android:targetPackage="com.example.smsguard" />
+    </PreferenceScreen>
 
 </PreferenceScreen>
