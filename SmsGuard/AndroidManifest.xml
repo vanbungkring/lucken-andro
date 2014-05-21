@@ -46,7 +46,8 @@
         </activity>
         <activity
             android:name="com.example.smsguard.activity.AboutActivity"
-            android:theme="@android:style/Theme.Light.NoTitleBar" >
+            android:label="@string/AboutTitle"
+            android:theme="@android:style/Theme.Dialog" >
         </activity>
         <activity
             android:name="com.example.smsguard.activity.ContactActivity"

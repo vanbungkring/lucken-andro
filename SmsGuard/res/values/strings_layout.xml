@@ -24,6 +24,7 @@
     <string name="ChatMessageHint">Message</string>
     <string name="ChatMessageButton">Send</string>
     <string name="ActivationTitle">Activation</string>
+    <string name="AboutTitle">About this application</string>
     <string name="AboutHeader">About SMS Guard</string>
     <string name="Aboutcontent">Lorem ipsum dollar sit amet Lorem ipsum dollar sit amet Lorem ipsum dollar sit amet Lorem ipsum dollar sit amet Lorem ipsum dollar sit amet Lorem ipsum dollar sit amet </string>
 

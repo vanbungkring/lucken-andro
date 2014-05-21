@@ -56,7 +56,7 @@
             android:title="Language Selection" />
     </PreferenceCategory>
 
-    <PreferenceScreen android:title="About this application" >
+    <PreferenceScreen android:title="@string/AboutTitle" >
         <intent
             android:action="android.intent.action.MAIN"
             android:targetClass="com.example.smsguard.activity.AboutActivity"
