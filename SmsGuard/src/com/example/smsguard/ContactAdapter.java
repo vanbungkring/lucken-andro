@@ -1,18 +1,14 @@
 package com.example.smsguard;
-
-import java.io.File;
+ 
 import java.util.List;
 
 import com.example.smsguard.model.Contact;
 
 import android.app.Activity;
-import android.content.Context;
-import android.os.Handler;
-import android.os.Message;
+import android.content.Context; 
 import android.text.InputFilter;
 import android.view.LayoutInflater;
-import android.view.View;
-import android.view.View.OnClickListener;
+import android.view.View; 
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;

@@ -2,19 +2,12 @@ package com.example.smsguard.activity;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import com.example.smsguard.ContactAdapter;
+ 
 import com.example.smsguard.MessageAdapter;
 import com.example.smsguard.R;
-import com.example.smsguard.helper;
-import com.example.smsguard.R.id;
-import com.example.smsguard.R.layout;
-import com.example.smsguard.R.menu;
-import com.example.smsguard.R.string;
-import com.example.smsguard.model.Contact;
+import com.example.smsguard.helper; 
 import com.example.smsguard.model.Message;
-
-import android.app.Activity;
+ 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -23,9 +16,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AbsListView;
 import android.widget.AbsListView.OnScrollListener;
-import android.widget.AdapterView;
-import android.widget.ImageView;
-import android.widget.ListView;
+import android.widget.AdapterView; import android.widget.ListView;
 
 public class MainActivity extends BaseActivity {
 	ListView list;

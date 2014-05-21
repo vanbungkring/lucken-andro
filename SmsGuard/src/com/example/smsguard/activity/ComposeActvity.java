@@ -1,11 +1,8 @@
 package com.example.smsguard.activity;
 
 import com.example.smsguard.R;
-import com.example.smsguard.helper;
-import com.example.smsguard.R.layout;
-import com.example.smsguard.R.string;
-
-import android.app.Activity;
+import com.example.smsguard.helper; 
+ 
 import android.os.Bundle;
 import android.view.MenuItem;
 

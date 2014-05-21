@@ -4,9 +4,7 @@
 package com.example.smsguard.activity;
 
 import com.example.smsguard.R;
-import com.example.smsguard.helper;
-import com.example.smsguard.R.string;
-import com.example.smsguard.R.xml;
+import com.example.smsguard.helper; 
 
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.OnSharedPreferenceChangeListener;
@@ -21,8 +19,9 @@ import android.view.MenuItem;
  * @author Luqman
  * 
  */
+@SuppressWarnings("deprecation")
 public class SettingsActivity extends PreferenceActivity implements
-		OnSharedPreferenceChangeListener {
+		OnSharedPreferenceChangeListener { 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -39,6 +38,7 @@ public class SettingsActivity extends PreferenceActivity implements
 				sp.getString("prefLanguageSelection", ""));
 	}
 
+	
 	@Override
 	protected void onResume() {
 		super.onResume();
