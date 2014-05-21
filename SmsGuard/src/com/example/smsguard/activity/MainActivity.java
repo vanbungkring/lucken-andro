@@ -21,11 +21,13 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AbsListView;
+import android.widget.AbsListView.OnScrollListener;
 import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
 
-public class MainActivity extends Activity {
+public class MainActivity extends BaseActivity {
 	ListView list;
 	List<Message> Messsages = new ArrayList<Message>();
 
@@ -45,6 +47,21 @@ public class MainActivity extends Activity {
 					public void onItemClick(AdapterView<?> parent, View view,
 							int position, long id) {
 						startActivity(new Intent(MainActivity.this, ChatActivity.class));
+					}
+				});
+				list.setOnScrollListener(new OnScrollListener() {
+					
+					@Override
+					public void onScrollStateChanged(AbsListView view, int scrollState) {
+						// TODO Auto-generated method stub
+						ctReset();
+					}
+					
+					@Override
+					public void onScroll(AbsListView view, int firstVisibleItem,
+							int visibleItemCount, int totalItemCount) {
+						// TODO Auto-generated method stub
+						
 					}
 				});
 			} catch (Exception e) {

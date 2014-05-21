@@ -19,7 +19,7 @@ import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
 
-public class ContactActivity extends Activity {
+public class ContactActivity extends BaseActivity {
 	ListView list;
 	List<Contact> Contacts = new ArrayList<Contact>();
 

@@ -9,7 +9,7 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.MenuItem;
 
-public class ComposeActvity extends Activity {
+public class ComposeActvity extends BaseActivity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {

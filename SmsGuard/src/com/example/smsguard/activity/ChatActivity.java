@@ -20,7 +20,7 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 
-public class ChatActivity extends Activity {
+public class ChatActivity extends BaseActivity {
 	ListView list;
 	List<Message> Messsages = new ArrayList<Message>();
 	EditText EtMessage;

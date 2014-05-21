@@ -30,6 +30,7 @@ public class LoginActivity extends Activity {
 						if (((Button) findViewById(R.id.BtLoginSignin))
 								.getText().toString().length() > 0) {
 							Editor edit = helper.getSp(LoginActivity.this).edit();
+							edit.putString("lastlogin", helper.getDate());
 							edit.putBoolean("islogin", true);
 							edit.commit();
 							startActivity(new Intent(LoginActivity.this,
