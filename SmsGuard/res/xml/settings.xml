@@ -45,7 +45,7 @@
             android:selectable="true"
             android:summary="After 30 minute of inactivity"
             android:title="Autolock" />
-        <ListPreference
+        <!-- <ListPreference
             android:defaultValue="1"
             android:enabled="true"
             android:entries="@array/language"
@@ -53,7 +53,7 @@
             android:key="prefLanguageSelection"
             android:selectable="true"
             android:summary="English"
-            android:title="Language Selection" />
+            android:title="Language Selection" /> -->
     </PreferenceCategory>
 
     <PreferenceScreen android:title="@string/AboutTitle" >

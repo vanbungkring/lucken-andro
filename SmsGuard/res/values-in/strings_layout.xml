@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="LoginTitle">Masuk</string>
+    <string name="LoginPasswordLabel">Kata Kunci</string>
+    <string name="LoginPasswordHint">Masukkan kata kunci Anda disini</string>
+    <string name="LoginButton">Masuk</string>
+    <string name="LoginForgotLabel">Lupa kata kunci Anda?</string>
+    <string name="MainTitle">SMS Guard</string>
+    <string name="ChatTitle">Obrolan</string>
+    <string name="SettingTitle">Pengaturan</string>
+    <string name="ComposeTitle">Buat pesan</string>
+    <string name="ComposeToLabel">Tujuan</string>
+    <string name="ComposeToHint">Ketik disini</string>
+    <string name="ComposeMessageLabel">Pesan baru</string>
+    <string name="ComposeMessageHint">Ketik disini</string>
+    <string name="ComposeButton">Acak dan kirim</string>
+    <string name="SendTitle">Kirim kontak</string>
+    <string name="SendToLabel">Tujuan</string>
+    <string name="SendToHint">Ketik disini</string>
+    <string name="SendButton">Kirim</string>
+    <string name="ContactTittle">Daftar kontak</string>
+    <string name="ContactSearchHint">Cari</string>
+    <string name="ChatMessageHint">Pesan</string>
+    <string name="ChatMessageButton">Kirim</string>
+    <string name="ActivationTitle">Aktifasi</string>
+    <string name="AboutTitle">Tentang aplikasi ini</string>
+    <string name="AboutHeader">Tentang SMS Guard</string>
+    <string name="Aboutcontent">Lorem ipsum dollar sit amet Lorem ipsum dollar sit amet Lorem ipsum dollar sit amet Lorem ipsum dollar sit amet Lorem ipsum dollar sit amet Lorem ipsum dollar sit amet </string>
+
+</resources>

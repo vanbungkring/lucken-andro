@@ -12,7 +12,7 @@
 
     <application
         android:allowBackup="true"
-         android:configChanges="orientation|screenSize"
+         android:configChanges="locale|orientation|screenSize"
         android:icon="@drawable/ic_launcher" >
         <activity
             android:name="com.example.smsguard.activity.CoverActivity"
