@@ -9,11 +9,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.Filter;
+import android.widget.Filterable;
 import android.widget.TextView;
 
 import com.example.smsguard.model.Message;
 
-public class MessageAdapter extends BaseAdapter {
+public class MessageAdapter extends BaseAdapter implements Filterable {
 	private static LayoutInflater inflater = null;
 	private Activity activity;
 	List<Message> Messages;
@@ -102,5 +104,11 @@ public class MessageAdapter extends BaseAdapter {
 		public TextView TvMessageDate;
 		public TextView TvMessageTime;
 		public TextView TvMessageContent;
+	}
+
+	@Override
+	public Filter getFilter() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }

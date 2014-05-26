@@ -30,7 +30,7 @@ public class BaseActivity extends Activity {
 		Date dateNow = helper.getDate(helper.getDate());
 		long dateDiff = dateNow.getTime() - dateLast.getTime();
 		  locktime = Long.parseLong(helper.getSp(this).getString(
-				"prefAutolock", "0")) * 60000;
+				"prefAutolock", "30")) * 60000;
 		if (dateDiff > locktime) 
 			logout();
 		 else
@@ -58,7 +58,7 @@ public class BaseActivity extends Activity {
 			ct.cancel();
 		}
 		locktime = Long.parseLong(helper.getSp(this).getString(
-				"prefAutolock", "0")) * 60000;
+				"prefAutolock", "30")) * 60000;
 		ct = new CountDownTimer(locktime, 1000) {
 
 			public void onTick(long millisUntilFinished) { 

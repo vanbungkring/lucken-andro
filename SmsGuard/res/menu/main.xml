@@ -12,24 +12,24 @@
         android:icon="@drawable/mn_messages_0"
         android:orderInCategory="0"
         android:showAsAction="ifRoom"
-        android:title="Messages"/>
+        android:title="@string/MnMessages"/>
     <item
         android:id="@+id/mn_contatcs"
         android:icon="@drawable/mn_contacts_0"
         android:orderInCategory="0"
         android:showAsAction="ifRoom"
-        android:title="Contacts"/>
+        android:title="@string/MnContacts"/>
     <item
         android:id="@+id/mn_actiovation"
         android:icon="@drawable/mn_activation_0"
         android:orderInCategory="0"
         android:showAsAction="ifRoom"
-        android:title="Activation"/>
+        android:title="@string/MnActivation"/>
     <item
         android:id="@+id/mn_setting"
         android:icon="@drawable/mn_settings_0"
         android:orderInCategory="0"
         android:showAsAction="ifRoom"
-        android:title="Settings"/>
+        android:title="@string/MnSettings"/>
 
 </menu>

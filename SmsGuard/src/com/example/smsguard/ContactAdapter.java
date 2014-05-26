@@ -1,20 +1,23 @@
 package com.example.smsguard;
- 
+
+import java.util.ArrayList;
 import java.util.List;
 
 import com.example.smsguard.model.Contact;
 
 import android.app.Activity;
-import android.content.Context; 
+import android.content.Context;
 import android.text.InputFilter;
 import android.view.LayoutInflater;
-import android.view.View; 
+import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.Filter;
+import android.widget.Filterable;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class ContactAdapter extends BaseAdapter {
+public class ContactAdapter extends BaseAdapter implements Filterable {
 	private static LayoutInflater inflater = null;
 	private Activity activity;
 	List<Contact> Contacts;
@@ -82,5 +85,45 @@ public class ContactAdapter extends BaseAdapter {
 		public TextView TvContactName;
 		public TextView TvContactPhone;
 		public ImageView ImgHapus;
+	}
+
+	@Override
+	public Filter getFilter() {
+		// TODO Auto-generated method stub
+		Filter filter = new Filter() {
+
+            @SuppressWarnings("unchecked")
+            @Override
+            protected void publishResults(CharSequence constraint, FilterResults results) {
+
+            	Contacts = (List<Contact>) results.values;
+                notifyDataSetChanged();
+            }
+
+            @Override
+            protected FilterResults performFiltering(CharSequence constraint) {
+
+                FilterResults results = new FilterResults();
+                ArrayList<Contact> FilteredArrayNames = new ArrayList<Contact>();
+
+                // perform your search here using the searchConstraint String.
+
+                constraint = constraint.toString().toLowerCase();
+                for (int i = 0; i < Contacts.size(); i++) {
+                    Contact dataNames = Contacts.get(i);
+                    if (dataNames.getName().toLowerCase().contains(constraint.toString()))  {
+                        FilteredArrayNames.add(dataNames);
+                    }
+                }
+
+                results.count = FilteredArrayNames.size();
+                results.values = FilteredArrayNames;
+              //  Log.e("VALUES", results.values.toString());
+
+                return results;
+            }
+        };
+
+        return filter;
 	}
 }

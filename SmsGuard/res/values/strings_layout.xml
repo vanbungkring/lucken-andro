@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <string name="MnMessages">Messages</string>
+    <string name="MnContacts">Contacts</string>
+    <string name="MnActivation">Activation</string>
+    <string name="MnSettings">Settings</string>
     <string name="LoginTitle">Sign In</string>
     <string name="LoginPasswordLabel">Password</string>
     <string name="LoginPasswordHint">Type Your  password here</string>

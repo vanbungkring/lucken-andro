@@ -5,19 +5,26 @@ import java.util.List;
 
 import com.example.smsguard.ContactAdapter;
 import com.example.smsguard.R;
-import com.example.smsguard.helper; 
+import com.example.smsguard.helper;
 import com.example.smsguard.model.Contact;
- 
+
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
 
 public class ContactActivity extends BaseActivity {
 	ListView list;
 	List<Contact> Contacts = new ArrayList<Contact>();
+	EditText EtSearch;
+	ContactAdapter adapter;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -26,8 +33,31 @@ public class ContactActivity extends BaseActivity {
 		setContentView(R.layout.activity_contact);
 		helper.setActionBar(this, getString(R.string.ContactTittle), true);
 		list = (ListView) findViewById(R.id.List);
+		EtSearch = (EditText) findViewById(R.id.EtContactSearch);
 		try {
+			EtSearch.addTextChangedListener(new TextWatcher() {
 
+				@Override
+				public void onTextChanged(CharSequence s, int start,
+						int before, int count) {
+					// TODO Auto-generated method stub
+					setListAdapter();
+					adapter.getFilter().filter(s);
+				}
+
+				@Override
+				public void beforeTextChanged(CharSequence s, int start,
+						int count, int after) {
+					// TODO Auto-generated method stub
+
+				}
+
+				@Override
+				public void afterTextChanged(Editable s) {
+					// TODO Auto-generated method stub
+
+				}
+			});
 			list.setEmptyView(findViewById(R.id.ListEmpty));
 			list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
@@ -63,7 +93,7 @@ public class ContactActivity extends BaseActivity {
 			ct.setPhone("0898765432" + i);
 			Contacts.add(ct);
 		}
-		ContactAdapter adapter = new ContactAdapter(this, Contacts);
+		adapter = new ContactAdapter(this, Contacts);
 		list.setAdapter(adapter);
 	}
 
@@ -71,5 +101,12 @@ public class ContactActivity extends BaseActivity {
 	public boolean onMenuItemSelected(int featureId, MenuItem item) {
 		finish();
 		return super.onMenuItemSelected(featureId, item);
+	}
+	 
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		MenuInflater inflater = getMenuInflater();
+		inflater.inflate(R.menu.main, menu);
+		return super.onCreateOptionsMenu(menu);
 	}
 }
