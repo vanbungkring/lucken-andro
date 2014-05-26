@@ -100,7 +100,11 @@ public class ContactActivity extends BaseActivity {
 
 	@Override
 	public boolean onMenuItemSelected(int featureId, MenuItem item) {
-		finish();
+		if (item.getItemId() != R.id.mn_contact_add){
+			finish();
+			return true;
+		}
+		else
 		return super.onMenuItemSelected(featureId, item);
 	}
 
@@ -122,7 +126,7 @@ public class ContactActivity extends BaseActivity {
 		case R.id.mn_contact_add:
 			i = new Intent(ContactActivity.this, ContactSendActivity.class);
 			break;
-		 
+
 		}
 		startActivity(i);
 		return super.onOptionsItemSelected(item);

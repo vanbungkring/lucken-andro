@@ -6,6 +6,6 @@
         android:icon="@drawable/ic_contact_add"
         android:orderInCategory="0"
         android:showAsAction="always"
-        android:title=""/>
+        android:title="add contact"/>
 
 </menu>
