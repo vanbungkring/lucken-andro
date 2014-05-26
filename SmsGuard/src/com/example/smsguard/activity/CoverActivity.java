@@ -1,8 +1,7 @@
 package com.example.smsguard.activity;
  
 
-import com.example.smsguard.R;
-import com.example.smsguard.R.layout;
+import com.example.smsguard.R; 
 
 import android.app.Activity;
 import android.content.Intent;

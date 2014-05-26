@@ -7,9 +7,7 @@ import com.example.smsguard.MessageAdapter;
 import com.example.smsguard.R;
 import com.example.smsguard.helper;
 import com.example.smsguard.model.Message;
-
-import android.app.Activity;
-import android.content.Intent;
+ 
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -17,10 +15,9 @@ import android.view.View.OnClickListener;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ListView;
-import android.widget.TextView;
+import android.widget.ListView; 
 
-public class ChatActivity extends Activity {
+public class ChatActivity extends BaseActivity {
 	ListView list;
 	List<Message> Messsages = new ArrayList<Message>();
 	EditText EtMessage;

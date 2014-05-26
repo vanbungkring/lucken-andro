@@ -1,15 +1,12 @@
 package com.example.smsguard.activity;
 
 import com.example.smsguard.R;
-import com.example.smsguard.helper;
-import com.example.smsguard.R.layout;
-import com.example.smsguard.R.string;
-
-import android.app.Activity;
+import com.example.smsguard.helper; 
+ 
 import android.os.Bundle;
 import android.view.MenuItem;
 
-public class ComposeActvity extends Activity {
+public class ComposeActvity extends BaseActivity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {

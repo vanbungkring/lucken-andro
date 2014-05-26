@@ -4,9 +4,7 @@
 package com.example.smsguard.activity;
 
 import com.example.smsguard.R;
-import com.example.smsguard.helper;
-import com.example.smsguard.R.string;
-import com.example.smsguard.R.xml;
+import com.example.smsguard.helper; 
 
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.OnSharedPreferenceChangeListener;
@@ -16,13 +14,17 @@ import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.PreferenceActivity;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ListView;
+import android.widget.Toast;
 
 /**
  * @author Luqman
  * 
  */
+@SuppressWarnings("deprecation")
 public class SettingsActivity extends PreferenceActivity implements
-		OnSharedPreferenceChangeListener {
+		OnSharedPreferenceChangeListener { 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -39,11 +41,21 @@ public class SettingsActivity extends PreferenceActivity implements
 				sp.getString("prefLanguageSelection", ""));
 	}
 
+	
+	@Override
+	protected void onListItemClick(ListView l, View v, int position, long id) {
+		// TODO Auto-generated method stub
+		Toast.makeText(getApplicationContext(), position + " pos", Toast.LENGTH_SHORT).show();
+		super.onListItemClick(l, v, position, id);
+	}
+
+
 	@Override
 	protected void onResume() {
 		super.onResume();
 		getPreferenceScreen().getSharedPreferences()
 				.registerOnSharedPreferenceChangeListener(this);
+		
 	}
 
 	@Override

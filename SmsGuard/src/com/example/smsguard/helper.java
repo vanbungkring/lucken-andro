@@ -1,22 +1,20 @@
 package com.example.smsguard;
 
 import java.lang.reflect.Field;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
-
-import android.app.ActionBar;
+import java.util.Date;
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.preference.PreferenceManager;
-import android.view.View;
 import android.view.ViewConfiguration;
-import android.webkit.WebView.FindListener;
-import android.widget.ImageView;
-import android.widget.TextView;
 
+@SuppressLint("SimpleDateFormat")
 public class helper {
 	static SharedPreferences sp;
 
@@ -55,5 +53,22 @@ public class helper {
 		Calendar calendar = Calendar.getInstance();
 		SimpleDateFormat simpleDateFormat = new SimpleDateFormat(format);
 		return simpleDateFormat.format(calendar.getTime());
+	}
+
+	public static String getDate() {
+		return getCurrentDate("yyyy-MM-dd HH:mm:ss");
+	}
+
+	public static Date getDate(String stringDate) {
+		SimpleDateFormat format = new SimpleDateFormat(
+				"yyyy-MM-dd HH:mm:ss");
+		try {
+			return format.parse(stringDate);
+
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return getDate(getDate());
+		}
 	}
 }

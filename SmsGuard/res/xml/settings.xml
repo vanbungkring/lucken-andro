@@ -45,7 +45,7 @@
             android:selectable="true"
             android:summary="After 30 minute of inactivity"
             android:title="Autolock" />
-        <ListPreference
+        <!-- <ListPreference
             android:defaultValue="1"
             android:enabled="true"
             android:entries="@array/language"
@@ -53,12 +53,14 @@
             android:key="prefLanguageSelection"
             android:selectable="true"
             android:summary="English"
-            android:title="Language Selection" />
-
-        <EditTextPreference
-            android:defaultValue="About this application"
-            android:key="prefAbout"
-            android:title="About" />
+            android:title="Language Selection" /> -->
     </PreferenceCategory>
+
+    <PreferenceScreen android:title="@string/AboutTitle" >
+        <intent
+            android:action="android.intent.action.MAIN"
+            android:targetClass="com.example.smsguard.activity.AboutActivity"
+            android:targetPackage="com.example.smsguard" />
+    </PreferenceScreen>
 
 </PreferenceScreen>

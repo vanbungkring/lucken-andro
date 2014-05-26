@@ -2,12 +2,11 @@ package com.example.smsguard.activity;
 
 import com.example.smsguard.R;
 import com.example.smsguard.helper;
-
-import android.app.Activity;
+ 
 import android.os.Bundle;
 import android.view.MenuItem;
 
-public class ActivationActivity extends Activity {
+public class ActivationActivity extends BaseActivity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {

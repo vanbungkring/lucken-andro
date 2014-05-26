@@ -5,13 +5,9 @@ import java.util.List;
 
 import com.example.smsguard.ContactAdapter;
 import com.example.smsguard.R;
-import com.example.smsguard.helper;
-import com.example.smsguard.R.id;
-import com.example.smsguard.R.layout;
-import com.example.smsguard.R.string;
+import com.example.smsguard.helper; 
 import com.example.smsguard.model.Contact;
-
-import android.app.Activity;
+ 
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -19,7 +15,7 @@ import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
 
-public class ContactActivity extends Activity {
+public class ContactActivity extends BaseActivity {
 	ListView list;
 	List<Contact> Contacts = new ArrayList<Contact>();
 
