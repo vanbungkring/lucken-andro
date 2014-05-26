@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" >
+
+    <item
+        android:id="@+id/mn_contact_add"
+        android:icon="@drawable/ic_contact_add"
+        android:orderInCategory="0"
+        android:showAsAction="always"
+        android:title=""/>
+
+</menu>

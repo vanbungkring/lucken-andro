@@ -53,6 +53,10 @@
             android:name="com.example.smsguard.activity.ContactActivity"
             android:theme="@style/AppTheme" >
         </activity>
+         <activity
+            android:name="com.example.smsguard.activity.ContactSendActivity"
+            android:theme="@style/AppTheme" >
+        </activity>
         <activity
             android:name="com.example.smsguard.activity.ActivationActivity"
             android:theme="@style/AppTheme" >

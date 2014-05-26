@@ -8,6 +8,7 @@ import com.example.smsguard.R;
 import com.example.smsguard.helper;
 import com.example.smsguard.model.Contact;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -102,11 +103,28 @@ public class ContactActivity extends BaseActivity {
 		finish();
 		return super.onMenuItemSelected(featureId, item);
 	}
-	 
+
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		MenuInflater inflater = getMenuInflater();
-		inflater.inflate(R.menu.main, menu);
+		inflater.inflate(R.menu.contact, menu);
 		return super.onCreateOptionsMenu(menu);
+	}
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		// Handle action bar item clicks here. The action bar will
+		// automatically handle clicks on the Home/Up button, so long
+		// as you specify a parent activity in AndroidManifest.xml.
+		int id = item.getItemId();
+		Intent i = null;
+		switch (id) {
+		case R.id.mn_contact_add:
+			i = new Intent(ContactActivity.this, ContactSendActivity.class);
+			break;
+		 
+		}
+		startActivity(i);
+		return super.onOptionsItemSelected(item);
 	}
 }
