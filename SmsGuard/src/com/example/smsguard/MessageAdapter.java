@@ -66,7 +66,7 @@ public class MessageAdapter extends BaseAdapter implements Filterable {
 				holder.TvMessageTime = (TextView) vi
 						.findViewById(R.id.TvChatTime);
 				holder.TvMessageContent = (TextView) vi
-						.findViewById(R.id.TvChatContent);
+						.findViewById(R.id.TvChatContent); 
 			} else {
 				vi = inflater.inflate(R.layout.message_item, null);
 				holder.TvMessageSender = (TextView) vi
@@ -74,8 +74,10 @@ public class MessageAdapter extends BaseAdapter implements Filterable {
 				holder.TvMessageDate = (TextView) vi
 						.findViewById(R.id.TvMessageDate);
 				holder.TvMessageContent = (TextView) vi
-						.findViewById(R.id.TvMessageContent);
-			}
+						.findViewById(R.id.TvMessageContent); 
+			} 
+			
+			
 			InputFilter[] FilterArray = new InputFilter[1];
 			FilterArray[0] = new InputFilter.LengthFilter(100);
 			holder.TvMessageContent.setFilters(FilterArray);

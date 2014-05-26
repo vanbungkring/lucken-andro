@@ -10,9 +10,11 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.graphics.drawable.ColorDrawable;
 import android.preference.PreferenceManager;
 import android.view.ViewConfiguration;
+import android.widget.TextView;
 
 @SuppressLint("SimpleDateFormat")
 public class helper {
@@ -60,8 +62,7 @@ public class helper {
 	}
 
 	public static Date getDate(String stringDate) {
-		SimpleDateFormat format = new SimpleDateFormat(
-				"yyyy-MM-dd HH:mm:ss");
+		SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 		try {
 			return format.parse(stringDate);
 

@@ -28,7 +28,7 @@ public class MainActivity extends BaseActivity {
 		if (helper.getSp(this).getBoolean("islogin", false)) {
 			setContentView(R.layout.activity_main);
 			helper.setActionBar(this, getString(R.string.MainTitle), false);
-			helper.getOverflowMenu(this);
+			helper.getOverflowMenu(this); 
 			list = (ListView) findViewById(R.id.List);
 			try {
 

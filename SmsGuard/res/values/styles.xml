@@ -7,6 +7,7 @@
 
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
         <item name="android:popupBackground">@drawable/menu_dropdown_panel_example</item>
+        <item name="android:typeface">monospace</item>
     </style>
 
     <!-- Application theme. -->
