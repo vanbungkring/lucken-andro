@@ -25,7 +25,7 @@ public class BaseActivity extends Activity {
 	@Override
 	protected void onResume() {
 		super.onResume();
-		FontsOverride.setDefaultFont(this, "MONOSPACE", "fonts/pn-regular.otf");
+		FontsOverride.setDefaultFont(this, "MONOSPACE", "fonts/pn-semi-bold.otf");
 		String lastlogin = helper.getSp(this).getString("lastlogin", "");
 		dateLast = helper.getDate(lastlogin);
 		Date dateNow = helper.getDate(helper.getDate());

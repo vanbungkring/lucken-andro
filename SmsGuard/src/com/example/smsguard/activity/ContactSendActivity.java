@@ -6,7 +6,7 @@ import com.example.smsguard.helper;
 import android.app.Activity;
 import android.os.Bundle;
 
-public class ContactSendActivity extends Activity {
+public class ContactSendActivity extends BaseActivity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
