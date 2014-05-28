@@ -37,8 +37,6 @@ public class SettingsActivity extends PreferenceActivity implements
 		editTextPref.setSummary(sp.getString("prefRegistrationCenter", ""));
 		setSummary("prefServiceType", sp.getString("prefServiceType", ""));
 		setSummary("prefAutolock", sp.getString("prefAutolock", ""));
-		setSummary("prefLanguageSelection",
-				sp.getString("prefLanguageSelection", ""));
 	}
 
 	
@@ -92,9 +90,6 @@ public class SettingsActivity extends PreferenceActivity implements
 		if (key.equals("prefAutolock")) {
 			data = getResources().getStringArray(R.array.autolockValues);
 			data1 = getResources().getStringArray(R.array.autolock);
-		} else if (key.equals("prefLanguageSelection")) {
-			data = getResources().getStringArray(R.array.languageValues);
-			data1 = getResources().getStringArray(R.array.language);
 		} else if (key.equals("prefServiceType")) {
 			data = getResources().getStringArray(R.array.serviceValues);
 			data1 = getResources().getStringArray(R.array.service);
